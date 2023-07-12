@@ -1,0 +1,14 @@
+name: first-workflow-Troshchk
+on: push
+jobs:
+  build:
+    runs-on: latest-ubuntu
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - run: make setup
+      - run: make install
+      - name: linter
+        run: make lint
+      - name: tests
+        run: make test
