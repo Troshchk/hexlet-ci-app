@@ -1,5 +1,5 @@
 name: first-workflow-Troshchk
-on: push
+on: push 
 jobs:
   build:
     runs-on: ubuntu-latest
